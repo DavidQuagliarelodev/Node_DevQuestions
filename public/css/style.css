@@ -1,0 +1,35 @@
+
+body{
+    background-color: #eceff1;
+}
+
+.bg_navbar{
+    background-color: #157347;
+}
+
+.icon_header{
+    color: #eceff1;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.title_header{
+    color: #eceff1;
+    font-size: 30px;
+}
+
+#ask_title{
+    color: #eceff1;
+}
+
+.card-header{
+    background-color: #157347;
+}
+
+#btn_send_ask{
+    color: #eceff1;
+}
+
+#input_question_id{
+    display: none;
+}

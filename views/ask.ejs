@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('./partials/head')%>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Ask</title>
+</head>
+
+<body>
+    <header>
+        <%- include ('./partials/navbar')%>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h1 id="ask_title">Ask Question</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="http://localhost:8080/collectData">
+                        <label class="mb-3">Title</label>
+                        <input type="text" placeholder="Title" class="form-control mb-3" name="form_title" />
+                        <label class="mb-3">Question</label>
+                        <textarea placeholder="Question" class="form-control mb-3" name="form_question"></textarea>
+                        <button class="btn btn-success" id="btn_send_ask">Send Ask</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<%- include ('partials/scripts')%>
+<script src="/js/main.js"></script>
+</html>

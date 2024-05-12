@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head')%>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Question</title>
+  </head>
+
+  <body>
+    <header><%- include('partials/navbar')%></header>
+    <main>
+      <div class="container mt-5">
+        <hr />
+        <h1><%= perguntas.title%></h1>
+        <p><%= perguntas.description%></p>
+        <hr />
+      </div>
+
+      <div class="container mt-5">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-light">Answere</h1>
+          </div>
+          <div class="card-body">
+            <form method="post" action="/collectDataAnswer">
+              <textarea
+                name="answere"
+                placeholder="Answere Here"
+                class="form-control mb-3"
+              ></textarea>
+              <input
+                type="number"
+                name="questionid"
+                value="<%=perguntas.id%>"
+                id="input_question_id"
+              />
+              <button class="btn btn-success">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <%respostas.forEach(e =>{%>
+        <div class="card mt-3">
+          <div class="card-body">
+            <p><%= e.description%></p>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </main>
+  </body>
+  <%- include('partials/scripts')%>
+</html>

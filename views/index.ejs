@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('partials/head')%>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <header><%- include ('partials/navbar')%></header>
+    <main>
+      <div class="container mt-3">
+        <h1>Ask your question</h1>
+        <a href="/ask">
+          <button class="btn btn-success mt-2">Ask Question</button>
+        </a>
+        <hr>
+      </div>
+      <%- include ('partials/questionscard')%>
+    </main>
+  </body>
+  <%- include ('partials/scripts')%>
+  <script src="/js/main.js"></script>
+</html>

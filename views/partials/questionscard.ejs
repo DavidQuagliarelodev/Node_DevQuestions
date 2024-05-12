@@ -1,0 +1,16 @@
+<div>
+  <%perguntas.forEach(e=>{%>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h2><%= e.title%></h2>
+      </div>
+      <div class="card-footer">
+        <a href= "question/<%=e.id%>">
+            <button class="btn btn-success">Answere</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <%})%>
+</div>
